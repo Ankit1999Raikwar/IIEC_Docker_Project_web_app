@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+       web1:
+               image: web:v2 
+               volumes: 
+                   - web1:/var/www/html
+               ports:
+                   - 8080:80
+               environment:
+                       x: webapp1
+       web2:
+               image: web:v2
+               volumes:
+                   - web2:/var/www/html
+               ports:
+                   - 8081:80
+               environment:
+                       x: webapp2
+volumes:
+      web1:
+      web2:
